@@ -77,7 +77,7 @@ class MyClient(discord.Client):
 
     async def find_previous_message(self, main_channel_obj, main_channel):
         user_message = None
-        async for prev_message in main_channel_obj.history(limit=10, before=message):
+        async for prev_message in main_channel_obj.history(limit=10, before=user_message):
             if prev_message.author.id == self.user.id and '$tu' in prev_message.content:
                 user_message = prev_message
                 break
