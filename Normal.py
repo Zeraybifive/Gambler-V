@@ -204,7 +204,7 @@ class MyClient(discord.Client):
             await self.process_waifu_claim(waifu, message, main_channel_id)
 
     async def process_waifu_claim(self, waifu, message, main_channel_id):
-        channel_name = f"{message.channel.name} ({message.guild})" if isinstance(message.channel, discord.TextChannel) else "Unknown"
+        channel_name = f"{message.channel.name} " if isinstance(message.channel, discord.TextChannel) else "Unknown" #({message.guild})
         user = message.author.name if message.interaction is None else message.interaction.user.name
 
         if message.interaction is None:
@@ -275,7 +275,7 @@ class MyClient(discord.Client):
         await asyncio.sleep(2)
         async for next_message in reaction.message.channel.history(limit=20, after=message):
             if next_message.author.id == bot_id and self.user.name in next_message.content and waifu.name in next_message.content:
-                await reaction.message.channel.send('ezez')
+                await reaction.message.channel.send('get sniped idiot')
                 print(f"{waifu.name} Claimed")
                 self.rolling[main_channel_id].set_claim_availability(False)
                 if not Config.AlwaysRoll:
