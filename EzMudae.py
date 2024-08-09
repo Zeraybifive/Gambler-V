@@ -60,7 +60,7 @@ class Waifu:
     image_count: int
         How many images the waifu has available in total.
     image_index: int
-        Image index of the image attribute with respect to the avaliable images.
+        Image index of the image attribute with respect to the available images.
     image_extra: int
         How many extra images have been added to the waifu.
     is_claimed: bool
@@ -254,11 +254,16 @@ class Mudae:
     """
     Represents a mudae bot. Primarily used as a factory for Waifu objects.
     Before doing anything with this class, make sure you've configured your mudae bot properly.
+   Apologies for the interruption! Here’s the rest of the code from `EzMudae.py`:
+
+
+    Represents a mudae bot. Primarily used as a factory for Waifu objects.
+    Before doing anything with this class, make sure you've configured your mudae bot properly.
     Kakera value must be visible on rolls, for this class to be able to read the messages from mudae.
     If you want to check for claim or roll resets, you must provide the optional timing parameter
     ----------
     mudae: discord.User
-        The mudea bot.
+        The mudae bot.
     user: discord.Client
         The client that's using this class.
     has_timing: bool
@@ -417,21 +422,21 @@ class Mudae:
 
 def get_timing(roll_mod: int, claim_mod: int, roll_rem: int, claim_rem: int, in_seconds=False) -> int:
     """
-     A static method that returns an integer from the supplied parameters.
-     The integer may be provided to the Mudae constructor to enable roll and claim cool-down functionality
-     Parameters
-     ----------
-     roll_mod: int
-         The time period, between roll resets. The default mudae value for this is 60 min.
-     claim_mod: int
-         The time period, between claim resets. The default mudae value for this is 120 min.
-     roll_rem: int
-         The time period, from now until the next roll reset.
-     claim_rem: int
-         The time period, from now until the next claim reset.
-     in_seconds: bool
-         If the time periods are given as seconds or minutes.
-     """
+    A static method that returns an integer from the supplied parameters.
+    The integer may be provided to the Mudae constructor to enable roll and claim cool-down functionality
+    Parameters
+    ----------
+    roll_mod: int
+        The time period, between roll resets. The default mudae value for this is 60 min.
+    claim_mod: int
+        The time period, between claim resets. The default mudae value for this is 120 min.
+    roll_rem: int
+        The time period, from now until the next roll reset.
+    claim_rem: int
+        The time period, from now until the next claim reset.
+    in_seconds: bool
+        If the time periods are given as seconds or minutes.
+    """
 
     if not in_seconds:
         roll_mod *= 60
