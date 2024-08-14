@@ -199,7 +199,7 @@ class MyClient(discord.Client):  # Defining a custom Discord client class by ext
         if waifu.type == waifu.Type.info:  # If the waifu message is just info
             print("Just an $im command or something")  # Print a message indicating it's info
         elif embed.thumbnail:  # If the message contains a thumbnail
-            print("probably mm")  # Print a message indicating it might be a mudae message
+            print("probably mm")  # Print a message indicating it might be a harem check
         else:  # If it's a claimable waifu
             await self.process_waifu_claim(waifu, message, main_channel_id)  # Process the waifu claim
 
