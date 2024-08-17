@@ -11,8 +11,8 @@ Channels = {
    # 2:[1270629650128961546],
 
 # The bot token for authentication with Discord API
-Token = 'OTE1Nzc2NjEzMzgyMjI1OTYw.G9GSij.wpKlxK1JT6_7h3tJqEtYD_JCDCaZiRkL4mHySY'
-# Token = 'MTI0MDY3MDcxODg4MzEzNTYwOA.GencH6.u-4y0T3xZfoNv6ImI5E8chppibgae13fksDzkA'  # Example commented out token
+Token = 'your token here'
+# Token = 'your token here'  # Example commented out token
 
 # Command used by the bot to trigger the roll functionality
 Rollcommand = 'hg'
